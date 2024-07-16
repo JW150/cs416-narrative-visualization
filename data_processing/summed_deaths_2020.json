@@ -1,0 +1,30 @@
+[
+    {
+        "country": "Germany",
+        "deaths": 903086,
+        "expected_deaths": 895014.0,
+        "excess_deaths": 8072.0,
+        "excess_deaths_percentage": 0.8938240654821357
+    },
+    {
+        "country": "Turkey",
+        "deaths": 88889,
+        "expected_deaths": 73484.0,
+        "excess_deaths": 15405.0,
+        "excess_deaths_percentage": 17.330603336745828
+    },
+    {
+        "country": "United Kingdom",
+        "deaths": 658306,
+        "expected_deaths": 583691.0,
+        "excess_deaths": 74615.0,
+        "excess_deaths_percentage": 11.33439464322063
+    },
+    {
+        "country": "United States",
+        "deaths": 3154415,
+        "expected_deaths": 2776810.0,
+        "excess_deaths": 377605.0,
+        "excess_deaths_percentage": 11.970682361071704
+    }
+]

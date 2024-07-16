@@ -1,0 +1,196 @@
+body {
+    background-color: #F1F3F3;
+}
+
+h1, h2, h4, p {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+h1 {
+    font-size: 8em;
+    font-family: 'Lato';
+}
+
+#title-field {
+    top: auto;
+    left: auto;
+    position: relative;
+}
+
+#title-field h1,
+#title-field h3 {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+#overview-title {
+    top: auto;
+    margin-top: auto;
+    position: relative;
+}
+
+#overview-title h1 {
+    color: white;
+}
+
+#text-div {
+    top: auto;
+    margin-top: auto;
+    position: relative;
+}
+
+#text-div h2 {
+    color: white;
+}
+
+#reference a {
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+span {
+    background: black !important;
+}
+
+.s0 {
+    background: url("../imgs/covid-cover.jpg");
+    background-size: cover;
+    text-align: center;
+}
+
+.s1, .s2, .s3, .s4 {
+    background-size: cover;
+}
+
+.s1 {
+    background: url("../imgs/dark_background.jpg");
+}
+
+.s1 h1, .s2 h1, .s3 h1 {
+    margin-left: 2em;
+    font-size: 2rem;
+    color: white;
+}
+
+.s2, .s3 {
+    background: url("../imgs/dark_background.jpg");
+}
+
+.s2 h1 {
+    text-align: left;
+}
+
+.s4 {
+    background: url("../imgs/mask.png");
+    position: relative;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    overflow: hidden;
+}
+
+#overview-chart-area svg,
+#line-chart-area svg,
+#bar-chart-1 svg,
+#bar-chart-2 svg {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: white;
+}
+
+#bar-chart-1 svg,
+#bar-chart-2 svg {
+    display: inline;
+}
+
+.axis {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #D4D8DA;
+    stroke-width: 2px;
+    shape-rendering: crispEdges;
+}
+
+.line {
+    fill: none;
+    stroke-width: 3px;
+    stroke: grey;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+.focus circle {
+    fill: #F1F3F3;
+    stroke: #777;
+    stroke-width: 3px;
+}
+
+.hover-line {
+    stroke: #777;
+    stroke-width: 2px;
+    stroke-dasharray: 3,3;
+}
+
+#selections .col-md-4 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+.d3-tip:after {
+    box-sizing: border-box;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    pointer-events: none;
+}
+
+.d3-tip.n:after {
+    content: "\25BC";
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+    text-align: center;
+}
+
+.d3-tip.e:after {
+    content: "\25C0";
+    margin: -4px 0 0 0;
+    top: 50%;
+    left: -8px;
+}
+
+.overview-control {
+    margin-top: 10px;
+}
+
+.s3-control {
+    margin-top: 20px;
+}
