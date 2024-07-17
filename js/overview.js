@@ -14,6 +14,14 @@ let interval;
 let dataset;
 let dateList = [];
 
+let population = {
+	"california": "38,965,193",
+	"texas": "30,503,301",
+	"florida": "22,610,726",
+	"new_york": "19,571,216",
+	"pennsylvania": "12,961,683"
+}
+
 // Tooltip
 const tip = d3.tip()
   .attr('class', 'd3-tip')
@@ -22,6 +30,7 @@ const tip = d3.tip()
     text += `<strong>Accumulated Cases:</strong> <span style='color:red'>${d3.format(".0f")(d.accumulated_cases)}</span><br>`;
     text += `<strong>Accumulated Deaths:</strong> <span style='color:red'>${d3.format(".0f")(d.accumulated_deaths)}</span><br>`;
     text += `<strong>Cases:</strong> <span style='color:red'>${d3.format(",.0f")(d.cases)}</span><br>`;
+	text += `<strong>Population:</strong> <span style='color:red'>${population[d.state]}</span><br>`;
     return text;
   });
 g1.call(tip);
@@ -116,6 +125,17 @@ d3.json("data_processing/processed_data_overview.json").then(function (data) {
 
   $("#date-slider").slider("option", "max", dateList.length - 1);
 });
+
+applyAnnotationOverview();
+
+function applyAnnotationOverview() {
+	var annotationOverview = svg.append('g');
+	annotationOverview.append('text')
+	  .attr('x', 150)
+	  .attr('y', 100)
+	  .classed('annotation', true)
+	  .text('States with more population have more deaths and cases.');
+  }
 
 function moveStep() {
   time = (time < dataset.length - 1) ? time + 1 : 0;

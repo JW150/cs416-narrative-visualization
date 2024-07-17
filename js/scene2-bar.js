@@ -58,6 +58,17 @@ class BarChart {
 		} else {
 			vis.updateExcessDeathPercentage(vis.data);
 		}
+		applyAnnotationBarChart();
+		function applyAnnotationBarChart() {
+			let annotationText = (vis.parentElement === "#bar-chart-1") ? "The U.S. has the most excess deaths as it has a larger population than the others."
+			: "However, surprisingly Turkey has the highest percentage of excess deaths in total deaths.";
+			var annotation = vis.svg.append('g');
+			annotation.append('text')
+				.attr('x', 20)
+				.attr('y', 230)
+				.classed('annotation', true)
+				.text(annotationText);
+			}
     }
 
     updateExcessDeaths(data) {

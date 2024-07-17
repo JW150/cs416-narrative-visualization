@@ -165,6 +165,44 @@ function updateLineGraph() {
     focus.select(".y-hover-line").attr("x2", -x(d.date));
   }
 
+  applyAnnotationLineChart();
+
+  function applyAnnotationLineChart() {
+	svg3.selectAll('.annotation').remove();
+
+	  if(yValue === "accumulated_cases"){
+
+		var annotation = svg3.append('g');
+		annotation.append('text')
+		  .attr('x', 500)
+		  .attr('y', 250)
+		  .classed('annotation', true)
+		  .text('Cases increased sharply in 2022 as Omicron appeared.');
+		annotation.append('line')
+		  .attr('x1', 650)
+		  .attr('x2', 500)
+		  .attr('y1', 230)
+		  .attr('y2', 140)
+		  .classed('annotation', true);
+	} 
+	else if(yValue === "accumulated_deaths"){
+		
+		var annotation = svg3.append('g');
+		annotation.append('text')
+		  .attr('x', 50)
+		  .attr('y', 20)
+		  .classed('annotation', true)
+		  .text('Deaths increased sharply in late 2021 as Delta appeared.');
+		annotation.append('line')
+		  .attr('x1', 100)
+		  .attr('x2', 220)
+		  .attr('y1', 40)
+		  .attr('y2', 220)
+		  .classed('annotation', true);
+	}
+
+  }
+
   // Path generator
   const line = d3.line()
     .x(d => x(d.date))
